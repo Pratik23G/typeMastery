@@ -1,10 +1,20 @@
-var greetingMessage = "Hello world!";
+const greetingMessage = "Hello world!";
 // console.log(greetingMessage);
-var headingMessage = document.createElement("h1");
+const headingMessage = document.createElement("h1");
 headingMessage.textContent = greetingMessage;
 document.body.appendChild(headingMessage);
 //we will create some more examples now
-var body = "Howdy Yall This is the main message";
-var divMessage = document.createElement("divMessage");
+const body = "Howdy Yall This is the main message";
+const divMessage = document.createElement("divMessage");
 divMessage.innerText = "Ho ho so you found me finally Alas";
 document.body.append(divMessage);
+const userHeadingMessage = "Pratik Gurung";
+const newHeading = document.createElement("h1");
+newHeading.textContent = userHeadingMessage;
+document.body.appendChild(newHeading);
+const day = 2;
+const pMessafe = `Learning TypeScript, day ${day}`;
+const paragraphText = document.createElement("p");
+paragraphText.textContent = pMessafe;
+document.body.appendChild(paragraphText);
+export {};
