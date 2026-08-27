@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.17.25"
+  },
+  "scripts": {
+    "watch": "tsc --watch"
   }
 }

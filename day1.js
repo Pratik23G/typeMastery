@@ -1,12 +1,12 @@
 function getDeviceStatus(deviceName, temperature, isOnline) {
     if (!isOnline) {
-        return "".concat(deviceName, " is offline");
+        return `${deviceName} is offline`;
     }
     if (temperature > 90) {
-        return "".concat(deviceName, " is overHeating");
+        return `${deviceName} is overHeating`;
     }
     else {
-        return "".concat(deviceName, " is running normally");
+        return `${deviceName} is running normally`;
     }
 }
 console.log(getDeviceStatus("GPU-01", 95, true));
