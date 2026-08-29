@@ -48,3 +48,7 @@ greeting = function (name) {
     return `Hi ${name}`;
 };
 console.log(greeting("Pratik"));
+const sayNamaste = (name) => {
+    return `Hi namaste K cha hajur ma chai ${name}`;
+};
+console.log(sayNamaste("Pratik"));
