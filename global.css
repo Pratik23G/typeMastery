@@ -1,0 +1,18 @@
+.url-cleaner {
+  margin: 1.5rem;
+  padding: 1.2rem;
+}
+
+.url-cleaner #title-input {
+  background-color: rgb(89, 245, 5);
+  color: aqua;
+  font-weight: 700;
+  font-size: medium;
+}
+
+.url-cleaner #clean-btn,
+.url-cleaner #result {
+  color: rgb(0, 60, 255);
+  padding: 1.2rem;
+  margin-bottom: 12px;
+}
