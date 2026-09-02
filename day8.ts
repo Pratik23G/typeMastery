@@ -61,3 +61,14 @@ let employee: {
 console.log(employee);
 
 console.log(employee.age);
+
+//there is also another type of object called empty object
+/* 
+looks more like an object but it basically accepts everything except null
+*/
+
+let vacancy: {} = {};
+console.log(vacancy.toString());
+
+let journalWrites: {} = 5;
+console.log(journalWrites);
