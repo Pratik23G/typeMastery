@@ -1,5 +1,5 @@
 const slugify = (title: string): string => {
-  let cleanedTitle: string = title.trim().toLowerCase().replace(/ /g, "-");
+  let cleanedTitle: string = title.trim().toLowerCase().replace(/\s+/g, "-");
   return cleanedTitle;
 };
 
