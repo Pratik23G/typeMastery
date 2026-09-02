@@ -28,4 +28,17 @@ let boolCheckStatus = true;
 let numberCheckStatus = 5;
 console.log(changeStatus(boolCheckStatus));
 console.log(changeStatus(numberCheckStatus));
+//now moving towards object types which is different then the primitive types
+/*
+Primitve types: bool, number, symbol, undefined, null, string, bigint
+
+*/
+let employee = {
+    firstName: "Pratik",
+    lastName: "Gurung",
+    age: 25,
+    jobTitle: "Developer and Programmer",
+};
+console.log(employee);
+console.log(employee.age);
 export {};
