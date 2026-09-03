@@ -22,4 +22,21 @@ skills.push("Messi GOAT");
 
 //note typecript is strict on what type of variables we define once
 // we make one causing errors for any incompatible values
+// bad skills.push(209); (Argument of type 'number' is
+// not assignable to parameter of type 'string'.)
 console.log(skills);
+
+//more array properties and methods
+
+let seriesGames = [1, 2, 3, 5];
+console.log(seriesGames.length); // gives length which is 3
+
+//use map operations
+//makes sure to build a new array using a
+// function on existing items of an array
+
+let numbersEven: number[] = [2, 4, 6, 8];
+
+const doubleNumbersEven: number[] = numbersEven.map((e) => e * 2);
+
+console.log(doubleNumbersEven);
