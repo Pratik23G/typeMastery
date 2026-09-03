@@ -27,3 +27,6 @@ console.log(seriesGames.length); // gives length which is 3
 let numbersEven = [2, 4, 6, 8];
 const doubleNumbersEven = numbersEven.map((e) => e * 2);
 console.log(doubleNumbersEven);
+//now we can also store mixed type values using the | or operator
+let scoreCard = ["A", 99, "B", 85, "C", 75];
+console.log(scoreCard);

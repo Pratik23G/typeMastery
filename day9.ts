@@ -40,3 +40,8 @@ let numbersEven: number[] = [2, 4, 6, 8];
 const doubleNumbersEven: number[] = numbersEven.map((e) => e * 2);
 
 console.log(doubleNumbersEven);
+
+//now we can also store mixed type values using the | or operator
+
+let scoreCard: (string | number)[] = ["A", 99, "B", 85, "C", 75];
+console.log(scoreCard);
