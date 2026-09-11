@@ -20,7 +20,19 @@
       Learning about DOM document.createElement() method i made a new div
       container
     </p>
+
+    <!-- Now with .setAttribute(name, value) method you can change values  and set attributes of an elemebnt 
+     on the go using Js-->
+    <input type="text" id="myInput" value="bottles" />
     <script type="module" src="slugGenerator.js"></script>
     <script type="module" src="day10.js"></script>
+    <script type="text/javascript">
+      let newElement = document.createElement("input");
+      document.body.appendChild(newElement);
+
+      document
+        .getElementById("myInput")
+        .setAttribute("value", "Sparkling WATER!!");
+    </script>
   </body>
 </html>
