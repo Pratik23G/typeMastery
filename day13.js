@@ -70,3 +70,31 @@ doBetter()
   .then((results) => {
     console.log(results);
   });
+
+//race condition is a real thing and a problem
+// if you don't have a return ready for then
+
+//bad example
+
+const GrocerylistWebsites = ["Amazon", "Walmart", "Safeway"];
+
+async function groceryMarts().then((url) => {
+    fetch(url).then(res => res.join()).then(data => {
+        GrocerylistWebsites.push(data);
+    });
+}).then(() => {
+    console.log(GrocerylistWebsites);
+});
+
+// here for the first then we do not return so the second
+// then wouldn't have a value to run the promise
+
+//Good method is to return the whole inner chain
+
+async function goodList().then((url)=> {
+    return fetch(url).then(res => res.join()).then(data => {
+        GrocerylistWebsites.push(data);
+    });
+}).then(() => {
+    console.log(GrocerylistWebsites);
+});
