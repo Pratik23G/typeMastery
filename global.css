@@ -22,3 +22,19 @@
   height: 100px;
   background-color: blue;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.red-bg {
+  background: red;
+}
+
+.white-text {
+  color: white;
+}
+
+.big-font {
+  font-size: 36px;
+}
