@@ -86,3 +86,47 @@ const totalCartPrice = products
 
 console.log("Total Price here is: ");
 console.log(totalCartPrice);
+
+//We will learn now about array method sespecially 8 methods easy ones
+
+// method 1:
+
+// same as before the filter method
+
+const items = [
+  { sneakerName: "Nike", price: 140, color: "Blue" },
+  { sneakerName: "Jordan", price: 220, color: "Varsity Red" },
+  { sneakerName: "Ascis Gel Kayano", price: 175, color: "Grey" },
+  { sneakerName: "Adidas", price: 180, color: "White" },
+  { sneakerName: "Puma", price: 135, color: "Yellow" },
+  { sneakerName: "A ma Miniere", price: 200, color: "White" },
+];
+
+const affordableHundredDollars = items.filter((shoes) => shoes.price < 150);
+
+console.log(affordableHundredDollars);
+
+//Method 2: Map as we did earlier very simple yet effective
+
+const numbersEven = [2, 4, 6, 8];
+
+const evenNumSquared = numbersEven.map((number) => {
+  return number * number;
+});
+
+console.log(evenNumSquared);
+
+//Method 3: find() method finding single object in an array
+
+const books = [
+  { title: "The Great Gatsby", pages: 180 },
+  { title: "To Kill a Mockingbird", pages: 281 },
+  { title: "1984", pages: 328 },
+  { title: "The Hobbit", pages: 310 },
+];
+
+const specificBook = books.find((book) => {
+  return book.title === "1984" && book.pages == 328;
+});
+
+console.log(specificBook);
