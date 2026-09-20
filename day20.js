@@ -130,3 +130,50 @@ const specificBook = books.find((book) => {
 });
 
 console.log(specificBook);
+
+//Today's method we talk about Method 4: forEach()
+
+books.forEach((item) => {
+  console.log(item.title);
+});
+
+//Method 5: some function returns boolean True or False
+
+const hasLessPages = books.some((book) => {
+  return book.pages <= 300;
+});
+
+//should return true or false in this case has 2 values so returns true
+console.log(hasLessPages);
+
+//Method 6: Every: Makes sure to check all the items in the arrray
+// falls under that condition
+
+const shoePrices = items.every((shoe) => {
+  return shoe.price <= 120;
+});
+
+//should return false
+console.log(shoePrices);
+
+//Method 7: Reduce same as yesterday we talked we make a new object or reduce
+// to combine arrays to make a single object.
+
+//sum of shoes prices example
+
+const totalBillBeforeTaxes = items.reduce((total, sneakerPrice) => {
+  return total + sneakerPrice.price;
+}, 0);
+
+//rings up for the total bill of all the sneakers instead
+// of using forEachLoop loops and combines all the result at one
+console.log(totalBillBeforeTaxes);
+
+// METHOD 8: includes method, takes a single argument instead of function
+
+const numberItems = [1, 2, 3, 4, 5];
+
+const includeNumber = numberItems.includes(3);
+
+//bool check to find if it has something inside the array, returns true
+console.log(includeNumber);
