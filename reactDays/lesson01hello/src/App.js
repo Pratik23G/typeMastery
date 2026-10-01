@@ -11,6 +11,7 @@ import {
 } from "./components/Hello";
 import MessageNamaste from "./components/Message";
 import HeroRoles from "./components/HeroInformation";
+import Likesbutton from "./components/LikeButton";
 function App() {
   return (
     <div className="App">
@@ -35,7 +36,8 @@ function App() {
       to the component whereas the state gets passed within the component
       */}
       <MessageNamaste />
-
+      {/* Todays practice before any learning and grinding state vs props cases */}
+      <Likesbutton />
       <HeroRoles />
     </div>
   );
