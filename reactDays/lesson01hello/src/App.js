@@ -12,9 +12,17 @@ import {
 function App() {
   return (
     <div className="App">
-      <Greet />
+      <Greet name="Pratik Gurung!!" heroName="IronMan">
+        <p>This is Children Props</p>
+      </Greet>
+      <Greet name="Clark" heroName="SuperMan">
+        <button>Actions</button>
+      </Greet>
+      <Greet name="Dianna" heroName="WonderWoman" />
       <AlertMessage />
-      <Welcome />
+      <Welcome name="Pamu Gurung" />
+      <Welcome name="Khem Gurung" />
+      <Welcome name="Robin Van Persie" />
       <Hello />
       <CallUser />
       <CheckStatus />
