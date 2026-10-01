@@ -9,6 +9,7 @@ import {
   CheckStatus,
   HasCheckedStatus,
 } from "./components/Hello";
+import MessageNamaste from "./components/Message";
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,12 @@ function App() {
       <CallUser />
       <CheckStatus />
       <HasCheckedStatus />
+      {/* Now we will see what gets rendered on the screen using state method */}
+      {/* 
+      Its a little diff than props as props are immutable and are mostly passed
+      to the component whereas the state gets passed within the component
+      */}
+      <MessageNamaste />
     </div>
   );
 }
