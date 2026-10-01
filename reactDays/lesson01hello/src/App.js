@@ -10,6 +10,7 @@ import {
   HasCheckedStatus,
 } from "./components/Hello";
 import MessageNamaste from "./components/Message";
+import HeroRoles from "./components/HeroInformation";
 function App() {
   return (
     <div className="App">
@@ -34,6 +35,8 @@ function App() {
       to the component whereas the state gets passed within the component
       */}
       <MessageNamaste />
+
+      <HeroRoles />
     </div>
   );
 }
