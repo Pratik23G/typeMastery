@@ -20,9 +20,9 @@ function App() {
       </Greet>
       <Greet name="Dianna" heroName="WonderWoman" />
       <AlertMessage />
-      <Welcome name="Pamu Gurung" />
-      <Welcome name="Khem Gurung" />
-      <Welcome name="Robin Van Persie" />
+      <Welcome name="Pamu Gurung" heroName="SleepingMonk" />
+      <Welcome name="Khem Gurung" heroName="Hulk" />
+      <Welcome name="Robin Van Persie" heroName="Footballer" />
       <Hello />
       <CallUser />
       <CheckStatus />
