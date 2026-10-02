@@ -4,7 +4,7 @@ import { useState } from "react";
 // import viteLogo from "./assets/vite.svg";
 import "./App.css";
 import ClickerEffect from "./components/ClickEffect";
-
+import HelloResponse from "./components/HelloClick";
 function Welcome() {
   return <h2>This is another message Hehehe</h2>;
 }
@@ -22,6 +22,7 @@ function App() {
       <Welcome />
       <Button />
       <ClickerEffect />
+      <HelloResponse />
     </div>
   );
 }
