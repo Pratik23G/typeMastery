@@ -5,6 +5,8 @@ import { useState } from "react";
 import "./App.css";
 import ClickerEffect from "./components/ClickEffect";
 import HelloResponse from "./components/HelloClick";
+
+import AboutPage from "./components/JsxPageMark";
 function Welcome() {
   return <h2>This is another message Hehehe</h2>;
 }
@@ -23,6 +25,7 @@ function App() {
       <Button />
       <ClickerEffect />
       <HelloResponse />
+      <AboutPage />
     </div>
   );
 }
