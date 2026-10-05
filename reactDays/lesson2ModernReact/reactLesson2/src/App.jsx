@@ -25,6 +25,23 @@ const userName = {
   imageSize: 90,
 };
 
+const products = [
+  { title: "Apple", id: 1, isTop3: true },
+  { title: "Asus", id: 4, isTop3: false },
+  { title: "Dell", id: 10, isTop3: false },
+  { title: "Nvidia", id: 2, isTop3: true },
+];
+
+function ShoppingList() {
+  const listItemsLog = products.map((product) => (
+    <li key={product.id} style={{ color: product.isTop3 ? "green" : "orange" }}>
+      {product.title}
+    </li>
+  ));
+
+  return <ul>{listItemsLog}</ul>;
+}
+
 function App() {
   // const [count, setCount] = useState(0);
 
@@ -48,6 +65,7 @@ function App() {
         }}
       ></img>
       <div>{isLoggedIn ? <AdminPage /> : <Form />}</div>
+      <ShoppingList />
     </div>
   );
 }
