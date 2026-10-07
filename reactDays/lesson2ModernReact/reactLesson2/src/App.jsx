@@ -9,6 +9,8 @@ import HelloResponse from "./components/HelloClick";
 // import AboutPage from "./components/JsxPageMark";
 import { AdminPage } from "./components/AdminPanel";
 import { Form } from "./components/LoginForm";
+import { MyButton } from "./components/TwoEeventsClick";
+import { CounterButton } from "./components/CounterWork";
 function Welcome() {
   return <h2>This is another message Hehehe</h2>;
 }
@@ -66,6 +68,8 @@ function App() {
       ></img>
       <div>{isLoggedIn ? <AdminPage /> : <Form />}</div>
       <ShoppingList />
+      <MyButton />
+      <CounterButton />
     </div>
   );
 }
