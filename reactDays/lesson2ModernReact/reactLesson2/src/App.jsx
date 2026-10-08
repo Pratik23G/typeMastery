@@ -47,6 +47,11 @@ function ShoppingList() {
 function App() {
   // const [count, setCount] = useState(0);
 
+  const [click, setClick] = useState(0);
+
+  function userClick() {
+    setClick((prev) => prev + 1);
+  }
   return (
     <div>
       <h1>Pratik React Journey Lets Go!!</h1>
@@ -70,8 +75,15 @@ function App() {
       <ShoppingList />
       <MyButton />
       <CounterButton />
+      <h1>Clicking buttons updating together</h1>
+      <Clickbutton click={click} onClick={userClick} />
+      <Clickbutton click={click} onClick={userClick} />
     </div>
   );
+}
+
+function Clickbutton({ click, onClick }) {
+  return <button onClick={onClick}>Clicked Now {click} times</button>;
 }
 
 export default App;
