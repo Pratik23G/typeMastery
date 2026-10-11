@@ -5,12 +5,21 @@ import { useState } from "react";
 import "./App.css";
 
 function Board() {
+  const [xisNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
+    if (squares[i]) {
+      return;
+    }
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+    if (xisNext) {
+      nextSquares[i] = "X";
+    } else {
+      nextSquares[i] = "O";
+    }
     setSquares(nextSquares);
+    setXIsNext(!xisNext);
   }
   return (
     <>
