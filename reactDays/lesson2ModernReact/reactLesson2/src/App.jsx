@@ -84,22 +84,36 @@ function App() {
   // here we use our previous knowledge of destructuring technique here
   // for left and right definition to set Values as 0
   const [clicks, setClicks] = useState({ left: 0, right: 0 });
+  const setLeft = (value) => setClicks({ ...clicks, left: value });
+  const setRight = (value) => setClicks({ ...clicks, right: value });
+
+  //lets add a table empty array to remember the keyStrokes
+
+  const [allClicks, setAll] = useState([]);
+
+  //lets us keep track of the state and how many times the button is pressed
+  // using total
+
+  //
+  const total = clicks.left + clicks.right;
 
   //this code right here can be written much elegently
   // using object spreads in react 2018 introduction
   const leftClick = () => {
-    setClicks({
-      ...clicks,
-      left: clicks.left + 1,
-    });
+    setAll(allClicks.concat("L"));
+    console.log("left before: ", clicks.left);
+    setLeft(clicks.left + 1);
+    console.log("left after clicks", clicks.left);
+    // setTotal(clicks.left + clicks.right);
   };
 
   //same for rightClick too
   const rightClick = () => {
-    setClicks({
-      ...clicks,
-      right: clicks.right + 1,
-    });
+    setAll(allClicks.concat("R"));
+    console.log("right before: ", clicks.right);
+    setRight(clicks.right + 1);
+    console.log("right after clicks", clicks.right);
+    // setTotal(updateRight + clicks.right);
   };
 
   return (
@@ -138,6 +152,8 @@ function App() {
         <button onClick={leftClick}>left</button>
         <button onClick={rightClick}> right </button>
         {clicks.right}
+        <p>{allClicks.join(" ")}</p>
+        <p>total {total} </p>
       </div>
     </div>
   );
