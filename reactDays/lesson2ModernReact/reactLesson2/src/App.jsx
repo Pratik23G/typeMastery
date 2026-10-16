@@ -34,6 +34,10 @@ const products = [
   { title: "Nvidia", id: 2, isTop3: true },
 ];
 
+const Display = (props) => {
+  return <div>{props.countVal}</div>;
+};
+
 function ShoppingList() {
   const listItemsLog = products.map((product) => (
     <li key={product.id} style={{ color: product.isTop3 ? "green" : "orange" }}>
@@ -44,10 +48,29 @@ function ShoppingList() {
   return <ul>{listItemsLog}</ul>;
 }
 
+const Button2 = (props) => {
+  return <button onClick={props.onClick}>{props.text}</button>;
+};
+
 function App() {
   // const [count, setCount] = useState(0);
 
   const [click, setClick] = useState(0);
+  const [countVal, setVal] = useState(0);
+  console.log("Rendering value before");
+
+  const increaseOne = () => {
+    console.log("Before increase");
+    setVal(countVal + 1);
+  };
+  const setZero = () => {
+    console.log("Before setting Zero");
+    setVal(0);
+  };
+  const decreaseOne = () => {
+    console.log("After decrease");
+    setVal(countVal - 1);
+  };
 
   function userClick() {
     setClick((prev) => prev + 1);
@@ -78,6 +101,11 @@ function App() {
       <h1>Clicking buttons updating together</h1>
       <Clickbutton click={click} onClick={userClick} />
       <Clickbutton click={click} onClick={userClick} />
+      <Display countVal={countVal} />
+
+      <Button2 onClick={increaseOne} text="plus" />
+      <Button2 onClick={setZero} text="zero" />
+      <Button2 onClick={decreaseOne} text="minus" />
     </div>
   );
 }
