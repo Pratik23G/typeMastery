@@ -34,10 +34,9 @@ const products = [
   { title: "Nvidia", id: 2, isTop3: true },
 ];
 
-const Display = (props) => {
-  return <div>{props.countVal}</div>;
-};
+//use of destructuring to refactor the Display instead of passing props
 
+const Display = ({ countVal }) => <div>{countVal}</div>;
 function ShoppingList() {
   const listItemsLog = products.map((product) => (
     <li key={product.id} style={{ color: product.isTop3 ? "green" : "orange" }}>
@@ -48,9 +47,10 @@ function ShoppingList() {
   return <ul>{listItemsLog}</ul>;
 }
 
-const Button2 = (props) => {
-  return <button onClick={props.onClick}>{props.text}</button>;
-};
+//same concept for refactoring using destructure method can be applied here too
+const Button2 = ({ onClick, text }) => (
+  <button onClick={onClick}>{text}</button>
+);
 
 function App() {
   // const [count, setCount] = useState(0);
