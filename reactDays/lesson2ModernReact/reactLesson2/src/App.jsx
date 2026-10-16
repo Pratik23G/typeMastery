@@ -52,6 +52,9 @@ const Button2 = ({ onClick, text }) => (
   <button onClick={onClick}>{text}</button>
 );
 
+//The above examples were simple what if have multiple states? lEts see an example with
+//Left arrow and Right Arrow
+
 function App() {
   // const [count, setCount] = useState(0);
 
@@ -75,6 +78,30 @@ function App() {
   function userClick() {
     setClick((prev) => prev + 1);
   }
+
+  //left arrow and right arrow since both have useState initialized to 0
+  // we can do something like this
+  // here we use our previous knowledge of destructuring technique here
+  // for left and right definition to set Values as 0
+  const [clicks, setClicks] = useState({ left: 0, right: 0 });
+
+  //this code right here can be written much elegently
+  // using object spreads in react 2018 introduction
+  const leftClick = () => {
+    setClicks({
+      ...clicks,
+      left: clicks.left + 1,
+    });
+  };
+
+  //same for rightClick too
+  const rightClick = () => {
+    setClicks({
+      ...clicks,
+      right: clicks.right + 1,
+    });
+  };
+
   return (
     <div>
       <h1>Pratik React Journey Lets Go!!</h1>
@@ -106,6 +133,12 @@ function App() {
       <Button2 onClick={increaseOne} text="plus" />
       <Button2 onClick={setZero} text="zero" />
       <Button2 onClick={decreaseOne} text="minus" />
+      <div>
+        {clicks.left}
+        <button onClick={leftClick}>left</button>
+        <button onClick={rightClick}> right </button>
+        {clicks.right}
+      </div>
     </div>
   );
 }
