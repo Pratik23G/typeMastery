@@ -69,18 +69,22 @@ function App() {
   const [countVal, setVal] = useState(0);
   console.log("Rendering value before");
 
-  const increaseOne = () => {
-    console.log("Before increase");
-    setVal(countVal + 1);
+  const setToValue = (newValue) => {
+    setVal(newValue);
   };
-  const setZero = () => {
-    console.log("Before setting Zero");
-    setVal(0);
-  };
-  const decreaseOne = () => {
-    console.log("After decrease");
-    setVal(countVal - 1);
-  };
+
+  // const increaseOne = () => {
+  //   console.log("Before increase");
+  //   setVal(countVal + 1);
+  // };
+  // const setZero = () => {
+  //   console.log("Before setting Zero");
+  //   setVal(0);
+  // };
+  // const decreaseOne = () => {
+  //   console.log("After decrease");
+  //   setVal(countVal - 1);
+  // };
 
   function userClick() {
     setClick((prev) => prev + 1);
@@ -151,9 +155,9 @@ function App() {
       <Clickbutton click={click} onClick={userClick} />
       <Display countVal={countVal} />
 
-      <Button2 onClick={increaseOne} text="plus" />
-      <Button2 onClick={setZero} text="zero" />
-      <Button2 onClick={decreaseOne} text="minus" />
+      <Button2 onClick={() => setToValue(countVal + 1)} text={"Plus"} />
+      <Button2 onClick={() => setToValue(0)} text={"Zero"} />
+      <Button2 onClick={() => setToValue(countVal - 1)} text={"Minus"} />
       <div>
         {clicks.left}
         <button onClick={leftClick}>left</button>
