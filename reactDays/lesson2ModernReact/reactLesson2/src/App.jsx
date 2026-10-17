@@ -52,6 +52,13 @@ const Button2 = ({ onClick, text }) => (
   <button onClick={onClick}>{text}</button>
 );
 
+const History = (props) => {
+  if (props.allClicks.length === 0) {
+    return <div>the app is used by pressing the buttons</div>;
+  }
+  return <div>button press history: {props.allClicks.join(" ")}</div>;
+};
+
 //The above examples were simple what if have multiple states? lEts see an example with
 //Left arrow and Right Arrow
 
@@ -155,6 +162,8 @@ function App() {
         <p>{allClicks.join(" ")}</p>
         <p>total {total} </p>
       </div>
+
+      <History allClicks={allClicks} />
     </div>
   );
 }
